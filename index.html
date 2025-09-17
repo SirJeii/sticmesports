@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STI College Marikina Esports Tournament</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 10, 30, 0.9), rgba(0, 20, 40, 0.95)), url('https://placehold.co/1920x1080/000f1e/ffffff?text=Game+Arena');
+            background-size: cover;
+            background-position: center;
+        }
+        .btn-register {
+            transition: all 0.3s ease-in-out;
+        }
+        .btn-register:disabled {
+            background-color: #4b5563;
+            cursor: not-allowed;
+            transform: scale(1);
+            box-shadow: none;
+        }
+        .btn-register:not(:disabled):hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0px 10px 20px rgba(251, 191, 36, 0.2);
+        }
+        .card-glow {
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+        }
+        .card-glow:hover {
+            box-shadow: 0 0 35px rgba(59, 130, 246, 0.6);
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Hero Section -->
+    <header class="hero-bg py-20 md:py-32 text-center">
+        <div class="container mx-auto px-4">
+            <h1 class="font-orbitron text-4xl md:text-6xl font-bold tracking-widest uppercase text-yellow-400">STI College Marikina</h1>
+            <h2 class="font-orbitron text-2xl md:text-4xl font-bold tracking-wider uppercase mt-2">Esports Tournament 2025</h2>
+            <p class="mt-4 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">The battle begins. Assemble your team and fight for glory.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-16">
+        
+        <!-- Registration Countdown -->
+        <section id="registration-section" class="text-center mb-20">
+            <h3 class="font-orbitron text-3xl font-bold text-blue-400 mb-2">REGISTRATION IS NOW OPEN</h3>
+            <p id="timer-status" class="text-lg text-yellow-400 mb-4">Closes in:</p>
+            <div id="countdown-timer" class="flex justify-center items-center space-x-2 md:space-x-4 mb-8">
+                <div class="bg-gray-800 p-4 rounded-lg min-w-[70px] md:min-w-[100px]">
+                    <div id="days" class="font-orbitron text-4xl md:text-6xl font-bold">00</div>
+                    <div class="text-sm text-gray-400">Days</div>
+                </div>
+                <div class="font-orbitron text-4xl md:text-6xl font-bold">:</div>
+                <div class="bg-gray-800 p-4 rounded-lg min-w-[70px] md:min-w-[100px]">
+                    <div id="hours" class="font-orbitron text-4xl md:text-6xl font-bold">00</div>
+                    <div class="text-sm text-gray-400">Hours</div>
+                </div>
+                <div class="font-orbitron text-4xl md:text-6xl font-bold">:</div>
+                <div class="bg-gray-800 p-4 rounded-lg min-w-[70px] md:min-w-[100px]">
+                    <div id="minutes" class="font-orbitron text-4xl md:text-6xl font-bold">00</div>
+                    <div class="text-sm text-gray-400">Minutes</div>
+                </div>
+                <div class="font-orbitron text-4xl md:text-6xl font-bold">:</div>
+                <div class="bg-gray-800 p-4 rounded-lg min-w-[70px] md:min-w-[100px]">
+                    <div id="seconds" class="font-orbitron text-4xl md:text-6xl font-bold">00</div>
+                    <div class="text-sm text-gray-400">Seconds</div>
+                </div>
+            </div>
+            <a id="register-link" href="https://forms.office.com/Pages/ResponsePage.aspx?id=Q97QyABtNEWjxl_CIYWrm8AdkEFPWENHkudfx8eudb1UODZEWFVXS1BaWERLV0VaOTdLT0NZOU9CUi4u" target="_blank">
+                <button id="register-button" class="btn-register font-orbitron bg-yellow-500 text-gray-900 font-bold py-4 px-12 rounded-lg text-xl uppercase tracking-wider shadow-lg">
+                    Register Now
+                </button>
+            </a>
+            <p id="registration-message" class="mt-4 text-gray-400">Registration ends on Friday at 5:00 PM.</p>
+        </section>
+
+        <!-- Featured Games -->
+        <section>
+            <h3 class="font-orbitron text-3xl font-bold text-center text-blue-400 mb-12">FEATURED GAMES</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                <!-- Mobile Legends Card -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden card-glow flex flex-col">
+                    <div class="w-full h-48 bg-black flex items-center justify-center p-6">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/a/a0/Mobile_Legends_Bang_Bang_2025_logo.png">
+                    </div>
+                    <div class="p-8 flex-grow">
+                        <h4 class="font-orbitron text-2xl font-bold text-yellow-400">Mobile Legends: Bang Bang</h4>
+                        <p class="mt-2 text-gray-300">Assemble your squad of 5 and battle your way through the Land of Dawn. Strategy, teamwork, and skill will lead you to victory.</p>
+                    </div>
+                </div>
+                
+                <!-- Valorant Card -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden card-glow flex flex-col">
+                     <div class="w-full h-48 bg-black flex items-center justify-center p-6">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Valorant_logo_-_pink_color_version.svg" alt="Valorant" class="max-h-full max-w-full object-contain">
+                    </div>
+                    <div class="p-8 flex-grow">
+                        <h4 class="font-orbitron text-2xl font-bold text-yellow-400">Valorant</h4>
+                        <p class="mt-2 text-gray-300">A 5v5 character-based tactical shooter where precise gunplay meets unique agent abilities. Outwit, outplay, and outshine your competition.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-700 mt-16">
+        <div class="container mx-auto px-4 py-6 text-center text-gray-500">
+            <p>&copy; 2025 STI College Marikina. All Rights Reserved.</p>
+            <p class="text-sm">This is an unofficial page for the school's esports event.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- TIME CONFIGURATION (Philippine Standard Time - PHT/UTC+8) ---
+            const registrationOpenDate = new Date('2025-09-17T17:00:00+08:00').getTime();
+            const registrationCloseDate = new Date('2025-09-19T17:00:00+08:00').getTime();
+
+            const registerButton = document.getElementById('register-button');
+            const countdownTimerEl = document.getElementById('countdown-timer');
+            const timerStatusEl = document.getElementById('timer-status');
+            const registrationMessageEl = document.getElementById('registration-message');
+
+            const daysEl = document.getElementById('days');
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+
+                // Before registration opens
+                if (now < registrationOpenDate) {
+                    registerButton.disabled = true;
+                    registerButton.textContent = 'Registration Opens Soon';
+                    countdownTimerEl.style.display = 'none';
+                    timerStatusEl.textContent = 'Registration begins at 5:00 PM on September 17.';
+                } 
+                // During registration period
+                else if (now < registrationCloseDate) {
+                    registerButton.disabled = false;
+                    registerButton.textContent = 'Register Now';
+                    countdownTimerEl.style.display = 'flex';
+                    timerStatusEl.textContent = 'Registration Closes In:';
+                    
+                    const distance = registrationCloseDate - now;
+
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    daysEl.textContent = String(days).padStart(2, '0');
+                    hoursEl.textContent = String(hours).padStart(2, '0');
+                    minutesEl.textContent = String(minutes).padStart(2, '0');
+                    secondsEl.textContent = String(seconds).padStart(2, '0');
+
+                } 
+                // After registration closes
+                else {
+                    registerButton.disabled = true;
+                    registerButton.textContent = 'Registration Closed';
+                    countdownTimerEl.style.display = 'none';
+                    timerStatusEl.textContent = 'Registration has officially closed.';
+                    clearInterval(countdownInterval);
+                }
+            }
+
+            const countdownInterval = setInterval(updateCountdown, 1000);
+            updateCountdown(); // Initial call to set the state immediately
+        });
+    </script>
+</body>
+</html>
+
+
